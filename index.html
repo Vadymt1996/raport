@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analiza czynników zewnętrznych wpływających на Uzysk - Luty 2026</title>
+    <title>Analiza czynników zewnętrznych wpływających na Uzysk - Luty 2026</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
@@ -18,7 +18,7 @@
         th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
         th { background-color: #e67e22; color: white; }
         tr:nth-child(even) { background-color: #f9f9f9; }
-        .chart-container { position: relative; height: 400px; width: 100%; }
+        .chart-container { position: relative; height: 320px; width: 100%; margin: 20px 0; }
         .alert { background: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; font-weight: bold; margin-bottom: 15px; border-left: 5px solid #f5c6cb; }
     </style>
 </head>
@@ -31,7 +31,25 @@
         <div class="alert">
             Czynnik krytyczny: Stwierdzono systematyczną stratę 3.522 g mięsa na każdej nodze na etapie oddzielania od korpusu.
         </div>
-        <h2>1. Analiza osiągnięcia wskaźników docelowych</h2>
+
+        <h2>1. Skala produkcji i utracony potencjał (Luty 2026)</h2>
+        <div class="grid">
+            <div class="metric">
+                <div class="metric-value">3 798 069</div>
+                <div class="metric-label">Przetworzone nogi (szt.)</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">1 308 488</div>
+                <div class="metric-label">Surowiec wejściowy (kg)</div>
+            </div>
+            <div class="metric" style="background: #f8d7da;">
+                <div class="metric-value" style="color: #c0392b;">13 376 kg</div>
+                <div class="metric-label">Utracone mięso (zostaje na korpusach)</div>
+                <div style="font-size: 11px; color: #666;">* (3.522g x 3.798.069 szt.)</div>
+            </div>
+        </div>
+
+        <h2>2. Analiza osiągnięcia wskaźników docelowych</h2>
         <div class="grid">
             <div class="metric">
                 <div class="metric-value">78.72%</div>
@@ -54,7 +72,7 @@
     </div>
 
     <div class="card">
-        <h2>2. Dynamika strat na korpusie (Luty 2026)</h2>
+        <h2>3. Dynamika strat na korpusie (Luty 2026)</h2>
         <p>Wykres oparty na przeprowadzonych analizach korpusu. Wyraźnie widoczny trend negatywny: ilość mięsa pozostającego na korpusie wzrastała w ciągu miesiąca.</p>
         <div class="chart-container">
             <canvas id="carcassTrendChart"></canvas>
@@ -65,15 +83,34 @@
     </div>
 
     <div class="card">
-        <h2>3. Dowód matematyczny: "Cena każdego grama"</h2>
-        <p>Analiza dużych wolumenów danych za luty potwierdza <b>bezpośrednią zależność liniową</b>: każdy 1 gram mięsa pozostający na korpusie "zabiera" <b>0.29%</b> z końcowego wskaźnika uzysku.</p>
+        <h2>4. Dowód matematyczny: "Cena każdego grama"</h2>
+        <p>Analiza dużych wolumenów danych za luty potwierdза <b>bezpośrednią zależność liniową</b>: każdy 1 gram mięsa pozostający na korpusie "zabiera" <b>0.29%</b> z końcowego wskaźnika uzysku.</p>
         <div class="chart-container">
             <canvas id="linearityChart"></canvas>
         </div>
+
+        <h3 style="color: #2c3e50; margin-top: 25px;">Tabela matematyczna osiągnięcia celu (79%)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dodatkowe mięso z korpusu (g)</th>
+                    <th>Dodatkowa masa (kg)</th>
+                    <th>Prognozowany Uzysk (%)</th>
+                    <th>Status Celu (79.00%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0.00 g</td><td>0 kg</td><td>78.72%</td><td>🔴 Nieosiągnięty</td></tr>
+                <tr><td>0.50 g</td><td>1 899 kg</td><td>78.87%</td><td>🔴 Nieosiągnięty</td></tr>
+                <tr style="background: #d4edda; font-weight: bold;"><td>+0.96 g</td><td>3 646 kg</td><td>79.00%</td><td>🟢 CEL OSIĄGNIĘTY</td></tr>
+                <tr><td>2.00 g</td><td>7 596 kg</td><td>79.30%</td><td>🟢 Przekroczony</td></tr>
+                <tr style="background: #e8f4fd;"><td>+3.52 g</td><td>13 376 kg</td><td>79.75%</td><td>🟢 Maks. potencjał</td></tr>
+            </tbody>
+        </table>
     </div>
 
     <div class="card">
-        <h2>4. Analiza korelacji dziennej (Punkty krytyczne)</h2>
+        <h2>5. Analiza korelacji dziennej (Punkty krytyczne)</h2>
         <table>
             <thead>
                 <tr>
@@ -93,7 +130,7 @@
     </div>
 
     <div class="card">
-        <h2>5. Wnioski kluczowe</h2>
+        <h2>6. Wnioski kluczowe</h2>
         <ul>
             <li><b>Zewnętrzny niedobór surowca:</b> Uzysk 78.72% nie wynika z procesów trybowania, lecz z niedostarczenia <b>13.3 ton</b> mięsa, które pozostało na korpusach.</li>
             <li><b>Czułość wskaźnika:</b> Aby osiągnąć cel 79.0%, wystarczy "odzyskać" z korpusu tylko 0.96 g na nogę.</li>
@@ -111,9 +148,20 @@
                     label: 'Gramy mięsa na 1 korpusie (2 nogi)',
                     data: [4.022, 5.726, 6.58, 5.524, 5.807, 9.309, 6.517, 5.397, 7.799, 8.946, 7.515, 9.308, 8.062, 8.000, 7.600],
                     borderColor: '#c0392b',
+                    backgroundColor: 'rgba(192, 57, 43, 0.1)',
                     fill: true,
                     tension: 0.3
                 }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' }
+                },
+                scales: {
+                    y: { beginAtZero: false, title: { display: true, text: 'Gramy (g)' } }
+                }
             }
         });
 
@@ -128,8 +176,19 @@
                     label: 'Prognoza uzysku (%)',
                     data: yields,
                     borderColor: '#e67e22',
-                    fill: false
+                    backgroundColor: 'rgba(230, 126, 34, 0.1)',
+                    fill: true,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#d35400'
                 }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { title: { display: true, text: 'Dodatkowe gramy z korpusu' } },
+                    y: { title: { display: true, text: 'Uzysk (%)' } }
+                }
             }
         });
     </script>
